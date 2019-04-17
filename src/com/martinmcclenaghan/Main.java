@@ -16,7 +16,12 @@ public class Main {
 
     public static int findMin(int[] start) {
 
-        return convertToInt(convertToNDArray(start));
+        // convert to sorted (ascending order) array with no duplicates
+        int [] noDuplicates = convertToNDArray(start);
+
+        //return integer formed of all elements of sorted array
+        //with no duplicates which will always be the minimum number
+        return convertToInt(noDuplicates);
     }
 
 
@@ -47,7 +52,6 @@ public class Main {
         }
 
         //convert back to int[]
-
         int[] noDupeArray = new int[noDupeList.size()];
 
         for (int i = 0; i < noDupeArray.length; i++) {
@@ -62,7 +66,6 @@ public class Main {
     public static int convertToInt(int[] array) {
 
         // takes integer array without duplicates and convert to String array
-
         String[] noDupeString = new String[array.length];
 
         for (int i = 0; i < array.length; i++) {
@@ -71,17 +74,16 @@ public class Main {
 
         }
 
-        //now convert to one String
-
-        String wholeNumberString = "";
+        //create StringBuilder and add characters
+        StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < noDupeString.length; i++) {
 
-            wholeNumberString = wholeNumberString + noDupeString[i];
+           sb.append(noDupeString[i]);
         }
 
-        //convert String to integer which is the minimum number
-        return Integer.parseInt(wholeNumberString);
+        //convert StringBuilder to String then to Integer
+        return Integer.parseInt(sb.toString());
 
 
     }
