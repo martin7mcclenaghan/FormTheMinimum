@@ -6,4 +6,4 @@ Code wars is great if you are learning to program like me! https://www.codewars.
 
 Please see here for full description of the challenge https://www.codewars.com/kata/form-the-minimum/train/java
 
-My solutions is not as simple as it could be so will be adding another soon!
+Tests have been written in Junit 4.

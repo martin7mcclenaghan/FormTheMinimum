@@ -17,7 +17,7 @@ public class Main {
     public static int findMin(int[] start) {
 
         // convert to sorted (ascending order) array with no duplicates
-        int [] noDuplicates = convertToNDArray(start);
+        int [] noDuplicates = createNoDupeArray(start);
 
         //return integer formed of all elements of sorted array
         //with no duplicates which will always be the minimum number
@@ -25,7 +25,7 @@ public class Main {
     }
 
 
-    public static int[] convertToNDArray(int[] start) {
+    public static int[] createNoDupeArray(int[] start) {
 
         //sort array
         Arrays.sort(start);
